@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Makeurls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @makeurls.each do |makeurl| %>
+      <tr>
+        <td><%= makeurl.num %></td>
+        <td><%= makeurl.url %></td>
+        <td><%= link_to 'Show', makeurl %></td>
+        <td><%= link_to 'Edit', edit_makeurl_path(makeurl) %></td>
+        <td><%= link_to 'Destroy', makeurl, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Makeurl', new_makeurl_path %>

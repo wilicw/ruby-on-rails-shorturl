@@ -1,0 +1,2 @@
+class Makeurl < ApplicationRecord
+end
